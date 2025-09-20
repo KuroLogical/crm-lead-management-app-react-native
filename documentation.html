@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation for CRM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            color: #333;
+        }
+
+        h1 {
+            font-size: 28px;
+            text-align: center;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            padding: 5px 0;
+        }
+
+        pre,
+        .code {
+            background: #f9f9f9;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+            font-family: monospace;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>CRM App Template Documentation</h1>
+        <p><strong>Created:</strong>Dec 2024</p>
+        <p><strong>Email:</strong> <a href="mailto:jjtec7@gmail.com">jjtec7@gmail.com</a></p>
+        <hr>
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><a href="#introduction">1. Introduction</a></li>
+            <li><a href="#setup">2. Setup and Installation</a></li>
+            <li><a href="#structure">3. Project Folder Structure</a></li>
+            <li><a href="#customization">4. Customization Guide</a></li>
+            <li><a href="#features">5. Key Features</a></li>
+            <li><a href="#api">6. API Integration</a></li>
+            <li><a href="#troubleshooting">7. Troubleshooting and FAQs</a></li>
+            <li><a href="#themes">8. Themes (Light and Dark)</a></li>
+            <li><a href="#fonts">9. Fonts</a></li>
+            <li><a href="#images">10. Images</a></li>
+            <li><a href="#language-files">11. Language Files</a></li>
+            <li><a href="#buttons-component">12. Buttons Component</a></li>
+            <li><a href="#support">13. Support</a></li>
+        </ul>
+        <hr>
+
+        <h2 id="introduction">1. Introduction</h2>
+        <p>This React Native template is designed for CRM. It ensures seamless performance Android platforms.</p>
+
+        <h2 id="setup">2. Setup and Installation</h2>
+        <h3>Prerequisites</h3>
+        <ul>
+            <li>Node.js(version 20.17.0 or higher) </li>
+          
+            <li>npm (version 10.9.2 or higher)</li>
+            <li>React Native CLI</li>
+        </ul>
+        <h3>Installation Steps</h3>
+        <div class="code">
+            cd project-folder<br>
+            npm install <br>
+            npx react-native link <br>
+            npm start<br>
+            npx react-native run-android <em># For Android</em><br>
+        </div>
+
+        <h2 id="structure">3. Project Folder Structure</h2>
+        <pre class="code">
+            src/<br>
+              ├── components/<br>
+              │    ├── commonComponents/<br>
+              │    ├── FlatListRender/<br>
+              ├── image/<br>
+              ├── images/<br>
+              ├── Language/<br>
+              ├── redux/<br>
+              ├── routes/<br>
+              ├── screens/<br>
+              ├── styles/<br>
+              ├── utils/<br>
+                   ├── Color.js<br>
+                   ├── Colors.js<br>
+                   ├── dimensions.js<br>
+                   ├── Fonts.js<br>
+        </pre>
+
+        <h2 id="customization">4. Customization Guide</h2>
+        <h3>Changing Colors</h3>
+        <p>Edit <code>src/utils/Color.js</code> or <code>Colors.js</code> to update the color palette:</p>
+        <div class="code">
+            export const COLORS = {<br>
+            primary: '#3498db',<br>
+            secondary: '#2ecc71',<br>
+            };
+        </div>
+        <h3>Editing Fonts</h3>
+        <p>Edit <code>src/utils/Fonts.js</code> for font-related customizations:</p>
+        <div class="code">
+            export const FONTS = {<br>
+            regular: 'Roboto-Regular',<br>
+            bold: 'Roboto-Bold',<br>
+            };
+        </div>
+
+        <h2 id="features">5. Key Features</h2>
+        <ul>
+            <li>CRM </li>
+            <li>Time Management</li>
+            <li>Localization Support</li>
+            <li>Offline Mode</li>
+        </ul>
+
+        <h2 id="api">6. API Integration</h2>
+        <div class="code">
+            import axios from 'axios';<br><br>
+            const API = axios.create({<br>
+            baseURL: 'https://api.example.com',<br>
+            });<br><br>
+            export default API;
+        </div>
+
+        <h2 id="troubleshooting">7. Troubleshooting and FAQs</h2>
+        <h3>The app doesn’t build</h3>
+        <ul>
+            <li>Ensure dependencies are installed: <code>npm install</code></li>
+            <li>Clear the cache: <code>npm start --reset-cache</code></li>
+        </ul>
+
+
+
+
+
+        <h2 id="themes">8. Themes (Light and Dark)</h2>
+        <p>Below are the constants for light and dark themes:</p>
+        <h3>Light Theme</h3>
+        <pre>
+export const lightTheme = {
+  theme_background: '#4b4eeb',
+  Light_theme_background: "#4b4eeb19",
+  bottomTab: "#F8F7FB",
+  // ... More color definitions ...
+};
+        </pre>
+        <h3>Dark Theme</h3>
+        <pre>
+export const darkTheme = {
+  theme_background: '#4b4eeb',
+  Light_theme_background: "#4b4eeb19",
+  bottomTab: "#1b1c1c",
+  // ... More color definitions ...
+};
+        </pre>
+
+        <h2 id="fonts">9. Fonts</h2>
+        <p>The following fonts are used in the project:</p>
+        <pre>
+const Fonts = {
+  Poppins_Regular: 'Poppins-Regular',
+  Poppins_Medium: 'Poppins-Medium',
+  Poppins_Bold: 'Poppins-Bold',
+  Poppins_Italic: 'Poppins-Italic',
+  Poppins_MediumItalic: 'Poppins-MediumItalic',
+  Poppins_BoldItalic: 'Poppins-BoldItalic',
+};
+export default Fonts;
+        </pre>
+
+        <h2 id="images">10. Images</h2>
+        <p>These images are required and imported for use in the project:</p>
+        <pre>
+const images = {
+  App_logo: require('./hundred.png'),
+  Image_1: require('./hundred.png'),
+  Image_2: require('./hundred.png'),
+  // ... Other images ...
+};
+export default images;
+        </pre>
+
+        <h2 id="language-files">11. Language Files</h2>
+        <p>The following language files are used:</p>
+        <pre>
+export { default as Fr } from './Fr.json';
+export { default as Spa } from './Spa.json';
+export { default as ara } from './ara.json';
+export { default as en } from './en.json';
+        </pre>
+
+        <h2 id="buttons-component">12. Buttons Component</h2>
+        <p>This reusable <code>Buttons</code> component is implemented as follows:</p>
+        <pre>
+import React, { useMemo } from 'react';
+import { TouchableOpacity, StyleSheet, Platform } from 'react-native';
+import { Fonts, Colors, darkTheme, lightTheme } from '../../utils';
+import { Button } from '@rneui/themed';
+import { useSelector } from 'react-redux';
+
+function Buttons(props) {
+  const isDarkMode = useSelector(state => state.DarkReducer.isDarkMode);
+  const Colors = isDarkMode ? darkTheme : lightTheme;
+
+  const { title, onPress, buttonStyle, buttonTextStyle, icon } = props;
+
+  const styles = useMemo(() => StyleSheet.create({
+    buttonStyle: {
+      backgroundColor: Colors.theme_background,
+      borderRadius: 8,
+      width: '100%',
+    },
+    buttonTextStyle: {
+      color: Colors.white_color,
+      fontFamily: Fonts.Poppins_Medium,
+      fontSize: 17, // Assuming SF(17)
+    },
+  }), [Colors]);
+
+  return (
+    <!-- <Button
+      title={title}
+      onPress={onPress}
+      icon={icon}
+      buttonStyle={[styles.buttonStyle, buttonStyle]}
+      titleStyle={[styles.buttonTextStyle, buttonTextStyle]}
+    /> -->
+  );
+}
+
+export default Buttons;
+        </pre>
+        <p><strong>Props:</strong></p>
+        <ul>
+            <li><code>title</code>: The text displayed on the button.</li>
+            <li><code>onPress</code>: Function to handle button press.</li>
+            <li><code>buttonStyle</code>: Custom styles for the button.</li>
+            <li><code>buttonTextStyle</code>: Custom styles for the text inside the button.</li>
+            <li><code>icon</code>: Icon displayed inside the button.</li>
+        </ul>
+
+        <h2 id="support">13. Support</h2>
+        <p>If you have questions, please email <a href="mailto:jjtec7@gmail.com">jjtec7@gmail.com</a>.</p>
+        <p>Thank you for using this template!</p>
+
+        <hr>
+    </div>
+
+
+    
+</body>
+
+</html>
