@@ -1,0 +1,1 @@
+export {default as DealsTabStyle} from './DealsTabStyle';

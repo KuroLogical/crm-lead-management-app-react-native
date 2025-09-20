@@ -1,0 +1,26 @@
+import React, { useMemo, useState } from "react";
+import { Rating } from 'react-native-ratings';
+import { useSelector } from "react-redux";
+import { darkTheme, lightTheme } from "../../utils";
+import { ReviewsStyle } from "../../styles";
+
+function RatingScreen(props) {
+  const isDarkMode = useSelector(state => state.DarkReducer.isDarkMode);
+  const Colors = isDarkMode ? darkTheme : lightTheme;
+  const ReviewsStyles = useMemo(() => ReviewsStyle(Colors), [Colors]);
+  const { type,  ratingCount = 5, ratingColor, ratingBackgroundColor,tintColor, imageSize,  startingValue = ratingCount, isDisabled, style } = props;
+  return (
+    <Rating
+      type={type}
+      ratingColor={ratingColor}
+      ratingBackgroundColor={ratingBackgroundColor}
+      ratingCount={ratingCount}
+      tintColor={isDarkMode ? "black" : null}
+      imageSize={imageSize}
+      startingValue={startingValue}
+      isDisabled={isDisabled}
+      style={style}
+    />
+  );
+};
+export default RatingScreen;
